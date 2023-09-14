@@ -89,6 +89,7 @@
         firstCard = back;
       } else {
         secondCard = back;
+        container.classList.add('true');
       }
 
       //Проверка на совпадение карточек
@@ -103,9 +104,11 @@
             secondCard.parentNode.classList.remove('true');
             firstCard = null;
             secondCard = null;
+            container.classList.remove('true');
           } else {
             firstCard = null;
             secondCard = null;
+            container.classList.remove('true');
           }
         }, 500);
       }
